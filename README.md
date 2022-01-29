@@ -59,3 +59,4 @@ ctest
 ctest --test-dir build
 ```
 
+![HelloCMake](https://github.com/bgyu/HelloCMake/actions/workflows/c-cpp.yml/badge.svg)

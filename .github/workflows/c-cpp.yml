@@ -14,10 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: configure
-      run: mkdir ../build && cmake --build ../build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../dist
-    - name: cmake --build ../build && cmake --install ../build
-      run: ../dist/bin/main
-    - name: run test executable
-      run: ../dist/bin/CalcTest
+      run: cd .. && cmake HelloCMake -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=./dist
+    - name: build and install
+      run: cmake --build build && cmake --install build
+    - name: run main application
+      run: ./dist/bin/main
     - name: run test via ctest
-      run: cd ../build && ctest
+      run: cd build && ctest

@@ -18,8 +18,8 @@ jobs:
     - name: configure
       run: cd .. && cmake HelloCMake -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=./dist
     - name: build and install
-      run: cmake --build build && cmake --install build
+      run: cd .. && cmake --build build && cmake --install build
     - name: run main application
-      run: ./dist/bin/main
+      run: cd .. && ./dist/bin/main
     - name: run test via ctest
-      run: cd build && ctest
+      run: cd ../build && ctest

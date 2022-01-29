@@ -60,3 +60,4 @@ ctest --test-dir build
 ```
 
 ![HelloCMake](https://github.com/bgyu/HelloCMake/actions/workflows/c-cpp.yml/badge.svg)
+![HelloCMake](https://github.com/github/docs/actions/workflows/c-cpp.yml/badge.svg?event=push)

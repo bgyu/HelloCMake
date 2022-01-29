@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: configure
+      run: mkdir ../build && cmake --build ../build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../dist
+    - name: cmake --build ../build && cmake --install ../build
+      run: ../dist/bin/main
+    - name: run test executable
+      run: ../dist/bin/CalcTest
+    - name: run test via ctest
+      run: cd ../build && ctest

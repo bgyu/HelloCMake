@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install boost dependency
-      run: sudo apt update && sudo apt install -yq libboost1.71-dev
+      run: sudo apt update && sudo apt install -yq libboost1.71-all-dev
     - name: configure
       run: cd .. && cmake HelloCMake -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=./dist
     - name: build and install

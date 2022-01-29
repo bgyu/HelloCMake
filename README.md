@@ -1,4 +1,4 @@
-# HelloCMake: Simple CMake project example
+# HelloCMake: Simple CMake project example: ![Build Status](https://github.com/bgyu/HelloCMake/actions/workflows/c-cpp.yml/badge.svg?event=push)
 * main: main executable
 This is main executable will call functions built from shared library calc
 
@@ -59,5 +59,5 @@ ctest
 ctest --test-dir build
 ```
 
-![HelloCMake](https://github.com/bgyu/HelloCMake/actions/workflows/c-cpp.yml/badge.svg?event=push)
+
 

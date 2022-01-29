@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 
 project(calc VERSION 1.0)
 
+# Tell cmake to build a shared library
 add_library(${PROJECT_NAME} SHARED)
 
 target_sources(${PROJECT_NAME} PRIVATE
